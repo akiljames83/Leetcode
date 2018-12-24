@@ -1,6 +1,7 @@
 class Solution {
 public:
     int numUniqueEmails(vector<string>& emails) {
+        // Can also use a set instead of hashtable, but hash appears to be faster
         map<string, int> uniqueEmails;
         vector<string>::iterator it = emails.begin();
         
