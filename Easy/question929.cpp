@@ -12,7 +12,7 @@ public:
             //cout << "Before: "<< email << endl;
             posAt = email.find("@");
             posDot = email.find(".");
-            while(posDot != string::npos && posDot < posAt) {
+            while(posDot != string::npos && posDot < posAt) { // string::npos when the character is not found
                 email.erase(posDot, 1);
                 posDot = email.find(".");
                 posAt = email.find("@");
@@ -27,8 +27,6 @@ public:
                 uniqueEmails.insert(make_pair(email,1));
                 count += 1;
             }
-            
-            
             it++;
         }
         
