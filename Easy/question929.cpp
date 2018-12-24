@@ -10,7 +10,7 @@ public:
         
         while(it != emails.end()){
             string email = *it;
-            //cout << "Before: "<< email << endl;
+            //cout << "Before: " << email << endl;
             posAt = email.find("@");
             posDot = email.find(".");
             while(posDot != string::npos && posDot < posAt) { // string::npos when the character is not found
@@ -19,11 +19,11 @@ public:
                 posAt = email.find("@");
             }
             posPlus = email.find("+");
-            //cout << "Middle: "<< email << endl;
+            //cout << "Middle: " << email << endl;
             if (posPlus != string::npos && posPlus < posAt) {
                 email.erase(posPlus, posAt-posPlus);
             }
-            //cout << "After: "<< email << endl;
+            //cout << "After: " << email << endl;
             if (uniqueEmails.find(email) == uniqueEmails.end()){
                 uniqueEmails.insert(make_pair(email,1));
                 count += 1;
