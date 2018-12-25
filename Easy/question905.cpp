@@ -56,3 +56,25 @@ public:
         return even;
     }
 };
+
+// Best Version: Inplace and O(n) runtime
+class Solution {
+public:
+    vector<int> sortArrayByParity(vector<int>& A) {
+        if(not A.size()) return A;
+        auto front = A.begin();
+        while(front != A.end() && *front % 2 == 0 ) front++;
+        if (front == A.end()) return A;
+        auto cur = front + 1;
+        int curVal;
+        for (; cur != A.end(); cur++){
+            if( *cur % 2 == 0) {
+                curVal = *cur;
+                *cur = *front;
+                *front = curVal;
+                front++;
+            }
+        }
+        return A;
+    }
+};
