@@ -24,3 +24,26 @@ public:
         return count;
     }
 };
+
+// Better; Not great
+class Solution {
+public:
+    int minDeletionSize(vector<string>& A) {
+        int num_words = A[0].length(), pos = 0, count = 0;
+        if (A.size() == 0 || num_words == 0) return 0;
+        while(num_words){
+            string new_word;
+            for(auto word: A){
+                if (new_word.back() > word[pos]){
+                    count++;
+                    break;
+                }
+                new_word = word[pos];
+            }
+            pos++;
+            num_words--;
+        }
+        
+        return count;
+    }
+};
