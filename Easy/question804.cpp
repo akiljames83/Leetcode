@@ -16,3 +16,21 @@ public:
         return uniqueCodes.size();
     }
 };
+
+// Cleaner Version:
+class Solution {
+public:
+    vector<string> ALPH = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+    int uniqueMorseRepresentations(vector<string>& words) {
+        std::set<string> uniqueCodes;
+
+        for(auto word: words) {
+            string morse;
+            for (auto ch: word){
+                morse += ALPH[int(ch - 'a')];
+            }
+            uniqueCodes.insert(morse);
+        }
+        return uniqueCodes.size();
+    }
+};
