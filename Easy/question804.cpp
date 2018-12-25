@@ -10,7 +10,6 @@ public:
                 morse += ALPH[int(ch) - (int)'a'];
             }
             uniqueCodes.insert(morse);
-            //cout << morse << endl;
             morse = "";
         }
         return uniqueCodes.size();
