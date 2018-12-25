@@ -48,7 +48,7 @@ public:
         while(it != emails.end()){
             string email = *it;
             //cout << "Before: "<< email << endl;
-            // Process the email
+
             posAt = email.find("@");
             posDot = email.find(".");
             while(posDot != string::npos && posDot < posAt) {
