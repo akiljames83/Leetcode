@@ -14,3 +14,19 @@ public:
         return (pmap['U'] - pmap['D'] || pmap['R'] - pmap['L']) ? false : true;
     }
 };
+
+// Faster solution:
+class Solution {
+public:
+    bool judgeCircle(string moves) {
+        int ud{}, lr{};
+        if (moves.length() == 0) return true;
+        for (auto ch : moves){
+            if (ch == 'U') ud++;
+            else if (ch == 'D') ud--;
+            else if (ch == 'L') lr++;
+            else lr--;
+        }
+        return (ud || lr) ? false : true;
+    }
+};
