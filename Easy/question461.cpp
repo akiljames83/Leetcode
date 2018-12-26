@@ -19,3 +19,16 @@ public:
     }
 };
 
+// Cleaner Version
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        int count{};
+        while (x or y) {
+            if ( (x & 0x01) != (y & 0x01)) count++;
+            x >>= 1;
+            y >>= 1;
+        }
+        return count;
+    }
+};
