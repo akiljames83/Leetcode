@@ -11,3 +11,18 @@ auto __=[]()
     return nullptr;
 }();
 ```
+
+## Input and Output in C++  
+- Make use of cstdio library to use c features for printing to screen.
+- The stdio.h library can also be used, but this can polute the global namespace.
+- Important note: iostream is faster to run whereas stdio is faster to build.
+
+```c++
+#include <cstdio>
+
+using namespace std;
+
+int main() {
+  printf("Hello World\n");
+}
+```
