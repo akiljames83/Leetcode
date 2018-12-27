@@ -29,15 +29,17 @@ public:
     }
 };
 
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * RecentCounter* obj = new RecentCounter();
- * int param_1 = obj->ping(t);
- */
-/*
-["RecentCounter","ping","ping","ping","ping","ping"]
-[[],[2196],[3938],[4723],[4775],[5952]]
-
-["RecentCounter","ping","ping","ping","ping"]
-[[],[1],[100],[3001],[3002]]
-*/
+// Better solution using a queue:
+class RecentCounter {
+private:
+    queue<int> q;
+public:
+    RecentCounter() = default;
+    
+    int ping(int t) {
+        q.push(t);
+        while((q.front() + 3000 < t))
+            q.pop();
+        return static_cast<int>(q.size());
+    }
+};
