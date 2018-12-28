@@ -46,3 +46,20 @@ public:
         return search(root, val);
     }
 };
+
+// Iterative Solution:
+class Solution {
+public:
+    TreeNode* searchBST(TreeNode* root, int val) {
+        while(root != nullptr) {
+            if (root-> val == val)
+                return root;
+            if (root->val > val) {
+                root = root->left;
+                continue;
+            }
+            root = root->right;     
+        }
+        return nullptr;
+    }
+};
