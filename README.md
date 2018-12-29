@@ -38,6 +38,8 @@ int main() {
 	- `index = str.find('c')` - Returns index of first occurence of `c`, if not found returns <strong><em>std::string::npos</em></strong>
 	- `str.substr(5)` - Returns a substring of the original string str from index 5 to the end
 	- To reverse a string: `std::reverse(str.begin(), str.end());`
+	- `str.find_first_of(C,P)` -> Finds first occurence of any character in C starting at position P
+	- `str.find_last_of(C,P)` -> Similar function to previous but finds last occurence
 - sstream library is also useful, some methods:
 	- Use `<<` to append values to string
 	- Convert variable to string use `.str()` method
