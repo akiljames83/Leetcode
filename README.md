@@ -27,5 +27,24 @@ int main() {
 }
 ```
 
+## Using sscanf in C++11
+- To use sscanf, you <em><strong>cannot</strong></em> use C++ classes like the string class.
+- To make use of the string class, you need to convert it into a c_str(), then it can be modified.
+- Additionally, some helpful c++ string methods:
+	- index = str.find('c'); - Returns index of first occurence of 'c', if not found returns <strong><em>std::string::npos</em></strong>
+	- str.substr(5) - Returns a substring of the original string str from index 5 to the end
+
+```c++
+#include <cstdio>
+
+using namespace std;
+int main() {
+	string str = "Akil is 50 years old.";
+	int age{};
+	std::sscanf(str.c_str(), "%d", &age);
+	cout << age << endl; // prints 50
+	return 0;
+}
+```
 ## TODO
 - Figure out iterative approach for question 590 and lookover iterative approach for 589
