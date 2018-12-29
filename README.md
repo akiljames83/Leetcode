@@ -35,6 +35,7 @@ int main() {
 	- Use `<<` to append values to string
 	- Convert variable to string use `.str()` method
 	- Clear contents through using `.str("")`
+- <strong><em>Question811.cpp</em></strong> goes over a lot of these functions!
 
 ## Using sscanf in C++11
 - To use sscanf, you <em><strong>cannot</strong></em> use C++ classes like the string class.
