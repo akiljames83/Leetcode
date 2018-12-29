@@ -18,3 +18,12 @@ public:
     }
 };
 
+// Cleaner Solution
+int maxDepth(Node* root) {
+        if(!root) return 0;
+        int depth{0};
+        for (Node * c : root->children){
+            depth = std::max(depth, maxDepth(c));
+        }
+        return depth + 1;
+}
