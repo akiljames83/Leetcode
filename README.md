@@ -27,16 +27,18 @@ int main() {
 }
 ```
 
-## Using sscanf in C++11
-- To use sscanf, you <em><strong>cannot</strong></em> use C++ classes like the string class.
-- To make use of the string class, you need to convert it into a c_str(), then it can be modified.
-- Additionally, some helpful c++ string methods:
+## String functions C++11
+- Some helpful c++ string methods:
 	- index = str.find('c'); - Returns index of first occurence of 'c', if not found returns <strong><em>std::string::npos</em></strong>
 	- str.substr(5) - Returns a substring of the original string str from index 5 to the end  
 - sstream library is also useful, some methods:
 	- Use '<<' to append values to string
 	- Convert variable to string use .str() method
 	- Clear contents through using .str("")
+
+## Using sscanf in C++11
+- To use sscanf, you <em><strong>cannot</strong></em> use C++ classes like the string class.
+- To make use of the string class, you need to convert it into a c_str(), then it can be modified.
 
 ```c++
 #include <cstdio>
