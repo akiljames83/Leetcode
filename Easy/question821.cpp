@@ -51,3 +51,20 @@ public:
         return sol;
     }
 };
+
+// Another sexc solution using builtins:
+vector<int> shortestToChar(string S, char C) {
+    vector<int> nums;
+    for (size_t i = 0; i < S.size(); ++i) {
+        auto l = S.find_last_of(C, i);
+        auto r = S.find_first_of(C, i);
+        if (l == string::npos) {
+            nums.emplace_back(r - i);
+        } else if (r == string::npos) {
+            nums.emplace_back(i - l);
+        } else {
+            nums.emplace_back(min(i - l, r - i));
+        }
+    }
+    return nums;
+}
