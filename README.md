@@ -16,6 +16,7 @@ auto fast_io =[]()
 - The main difference between these data structures is that map keeps the items in order, which can be beneficial if needed.
 - Unordered Map takes up more memory generally as it stores a much larger array.
 - However, it appears that unordered map is much more efficient for a pure look up table.
+- To use it: `unordered_map <int> myMap;` 
 
 ## Input and Output in C++  
 - Make use of cstdio library to use c features for printing to screen.
