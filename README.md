@@ -36,7 +36,8 @@ int main() {
 ## String functions C++11
 - Some helpful c++ string methods:
 	- `index = str.find('c')` - Returns index of first occurence of `c`, if not found returns <strong><em>std::string::npos</em></strong>
-	- `str.substr(5)` - Returns a substring of the original string str from index 5 to the end  
+	- `str.substr(5)` - Returns a substring of the original string str from index 5 to the end
+	- To reverse a string: `std::reverse(str.begin(), str.end())`
 - sstream library is also useful, some methods:
 	- Use `<<` to append values to string
 	- Convert variable to string use `.str()` method
