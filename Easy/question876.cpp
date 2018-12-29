@@ -15,3 +15,19 @@ public:
 };
 
 
+// Faster Solution -> O(N)
+class Solution {
+public:
+    ListNode* middleNode(ListNode* head) {
+        ListNode* cur{head};
+        int count{};
+        while(cur->next and cur->next->next){
+            head = head->next;
+            cur = cur->next->next;
+            count++;
+        }
+        if (cur->next and !cur->next->next) 
+            return head->next;
+        return head;
+    }
+};
