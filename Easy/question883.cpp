@@ -25,3 +25,30 @@ public:
         return exists;
     }
 };
+
+// Cleanup: N*N so dont need rows and colomuns explicitly defined
+class Solution {
+public:
+    int projectionArea(vector<vector<int>>& grid) {
+        if (!grid.size()) return 0;
+        int DIM = grid.size();
+        vector<int> max_rows(DIM, 0);
+        vector<int> max_cols(DIM, 0);
+        int exists{};
+        for (int i = 0; i < DIM; i++){
+            for (int j = 0; j < DIM; j++){
+                int cur = grid[i][j];
+                if (cur) exists++;
+                if (cur > max_cols[j]) max_cols[j] = cur;
+                if (cur > max_rows[i]) max_rows[i] = cur;
+            }
+        }
+        for (auto r: max_rows)
+            exists += r;
+        
+        for (auto c: max_cols)
+            exists += c;
+        
+        return exists;
+    }
+};
