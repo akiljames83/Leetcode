@@ -1,3 +1,4 @@
+// Beats 99.37%
 class Solution {
 public:
     int projectionArea(vector<vector<int>>& grid) {
@@ -15,14 +16,12 @@ public:
                 if (cur > max_rows[i]) max_rows[i] = cur;
             }
         }
-        for (auto r: max_rows){
-            //cout << "R -> " << r << endl;
+        for (auto r: max_rows)
             exists += r;
-        }
-        for (auto c: max_cols) {
-            //cout << "C -> " << c << endl;
+        
+        for (auto c: max_cols)
             exists += c;
-        }
+        
         return exists;
     }
 };
