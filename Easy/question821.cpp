@@ -30,3 +30,24 @@ public:
         return res;
     }
 };
+
+// Better solution - not mine:
+class Solution {
+public:
+    vector<int> shortestToChar(string S, char C) {
+        vector<int> sol(S.size(), INT32_MAX);
+        int cur = -1, i = 0;
+        for(auto n: S) {
+            if(n == C) cur = 0;
+            if(cur != -1) sol[i] = cur++;
+            i++;
+        }
+        
+        for(i--; i >= 0; i--) {
+            if(S[i] == C) cur = 0;
+            sol[i] = min(sol[i], cur++);
+        }
+        
+        return sol;
+    }
+};
