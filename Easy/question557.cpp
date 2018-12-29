@@ -21,3 +21,27 @@ public:
         return "";
     }
 };
+
+// Inplace solution -> Beats 100%!
+class Solution {
+public:
+    string reverseWords(string s) {
+        int size = s.size();
+        if (size == 0 || size == 1) return s;
+        int front{};
+        for (int i = 0; i < size; i++){
+            if ((s[i] == ' ') || (i == size - 1)){
+                
+                int back{i - 1};
+                if (i == size - 1) back++;
+                while(front <= back){
+                    char tmp = s[front];
+                    s[front++] = s[back];
+                    s[back--] = tmp;
+                }
+                front = i+1;
+            }
+        }
+        return s; 
+    }
+};
