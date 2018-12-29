@@ -63,3 +63,4 @@ int main() {
 ## TODO
 - Figure out iterative approach for question 590 and lookover iterative approach for 589
 - Inplace solution for question557.cpp
+- Go over question821 elegant solution
