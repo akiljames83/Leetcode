@@ -32,3 +32,33 @@ public:
     }
 };
 
+// Cleaned up:
+class Solution {
+public:
+    bool isToeplitzMatrix(vector<vector<int>>& matrix) {
+        int M = matrix.size();
+        int N = matrix[0].size();
+        
+        for(int i = 0; i < N; i++){
+            int y{M - 1}; 
+            int x{i};
+            int row_val{matrix[y][x]};
+            
+            while( (--x >= 0) and (--y >= 0))
+                if (matrix[y][x] != row_val) 
+                    return false;
+
+        }
+        for(int i = M - 1; i >= 0; i--){
+            int y{i};
+            int x{N - 1};
+            int row_val{matrix[y][x]};
+            
+            while( (--x >= 0) and (--y >= 0))
+                if (matrix[y][x] != row_val) 
+                    return false;
+            
+        }
+        return true;
+    }
+};
