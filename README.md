@@ -72,6 +72,7 @@ std::transform(s.begin(), s.end(), s.begin(), ::tolower);
 
 ```c++
 #include <cstdio>
+#include <iostream> // for string class
 
 using namespace std;
 int main() {
