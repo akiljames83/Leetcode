@@ -75,10 +75,10 @@ std::transform(s.begin(), s.end(), s.begin(), ::tolower);
 
 using namespace std;
 int main() {
-	string str = "Akil is 50 years old.";
+	string str = "50 years old.";
 	int age{};
 	std::sscanf(str.c_str(), "%d", &age);
-	cout << age << endl; // prints 50
+	printf("%d\n", age); // prints 50
 	return 0;
 }
 ```
