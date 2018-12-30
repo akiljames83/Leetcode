@@ -94,3 +94,4 @@ int main() {
 - Inplace solution for question557.cpp
 - Go over question821 elegant solution
 - Iterative solution for question872
+- Go over algorithm library
