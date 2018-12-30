@@ -21,9 +21,10 @@ auto fast_io =[]()
 
 ## Initializer list Map
 ```c++
-std::map<std::string, int> mapOfMarks = {
-		{"Riti",2},
-		{"Jack",4}
+std::map<std::string, int> mapOfMarks = 
+{
+	{"Riti",2},
+	{"Jack",4}
 };
 ```
 
@@ -55,7 +56,7 @@ int main() {
 	- Clear contents through using `.str("")`
 - <em>Question811.cpp</em> goes over a lot of these functions!
 
-## Special String Manip
+## Special String Manipulaion
 - Convert string to lowercase:
 ```c++
 #include <algorithm>
