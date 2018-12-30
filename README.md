@@ -19,6 +19,14 @@ auto fast_io =[]()
 - However, it appears that unordered map is much more efficient for a pure look up table.
 - To use it: `unordered_map <int> myMap;` 
 
+## Initializer list Map
+```c++
+std::map<std::string, int> mapOfMarks = {
+		{"Riti",2},
+		{"Jack",4}
+};
+```
+
 ## Input and Output in C++  
 - Make use of cstdio library to use c features for printing to screen.
 - The stdio.h library can also be used, but this can polute the global namespace.
@@ -47,6 +55,16 @@ int main() {
 	- Clear contents through using `.str("")`
 - <em>Question811.cpp</em> goes over a lot of these functions!
 
+## Special String Manip
+- Convert string to lowercase:
+```c++
+#include <algorithm>
+#include <string>
+
+std::string s = "ABC";
+std::transform(s.begin(), s.end(), s.begin(), ::tolower);
+```
+
 ## Using sscanf in C++11
 - To use sscanf, you <em><strong>cannot</strong></em> use C++ classes like the string class.
 - To make use of the string class, you need to convert it into a c_str(), then it can be modified.
@@ -69,8 +87,10 @@ int main() {
 - `<<` that shifts bits to the left which <strong>increases</strong> the value of the integer.
 - `>>` that shifts bits to the right which <strong>decreases</strong> the value of the integer.
 - To flip a bit: `bit ^= 0x01`, XOR operation with a single bit will perform the operation on least significant bit.
-- To retrieve the value from last bit: `bit &= 0x01` (in-place) or `bit = num & 0x01` (storing in new number).
+- To retrieve the value from last bit: `bit &= 0x01` (in-place) or `bit = num & 0x01` (storing in new number). 
+
 ## TODO
 - Figure out iterative approach for question 590 and lookover iterative approach for 589
 - Inplace solution for question557.cpp
 - Go over question821 elegant solution
+- Iterative solution for question872
