@@ -62,6 +62,13 @@ int main() {
 	return 0;
 }
 ```
+
+## Bit Manipulation
+- Question476.cpp covers some good concepts, review it;
+- `<<` that shifts bits to the left which <strong>increases</strong> the value of the integer.
+- `>>` that shifts bits to the right which <strong>decreases</strong> the value of the integer.
+- To flip a bit: `bit ^= 0x01`, XOR operation with a single bit will perform the operation on least significant bit.
+- To retrieve the value from last bit: `bit &= 0x01` (in-place) or `bit = num & 0x01` (storing in new number).
 ## TODO
 - Figure out iterative approach for question 590 and lookover iterative approach for 589
 - Inplace solution for question557.cpp
