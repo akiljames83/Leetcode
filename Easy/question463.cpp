@@ -34,19 +34,17 @@ public:
                         if (island.find(newpair) == island.end()) {
                             points.push(newpair);
                             island.insert(newpair);
-                            border -= 2;
+                            //border -= 2;
                         }
                     }
                 }  
             }
         }
-         
-//         cout << "ISLAND" << endl;
-        
-//         for (auto p : island){
-            
-//             cout << "Points: " << p.first << " , " << p.second << endl;
-//         }
+           
+        for (auto p : island)
+            for (auto c : checks)
+                if (island.find(make_pair(p.first + c.first, p.second + c.second)) != island.end())
+                    border--;
         
         return border + island.size()*4;
     }
