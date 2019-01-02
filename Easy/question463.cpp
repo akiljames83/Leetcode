@@ -1,3 +1,26 @@
+// Better Solution:
+class Solution {
+public:
+    int islandPerimeter(vector<vector<int>>& grid) {
+        int per{};
+        int height = grid.size();
+        int width = grid[0].size();
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                int inc{4};
+                if (!grid[i][j]) 
+                    continue;
+                if ((j + 1 < width) and grid[i][j+1])
+                    inc-=2;
+                if((i+1 < height) and grid[i+1][j])
+                    inc-=2;
+                per += inc;
+            }
+        }
+        return per;
+    }
+};
+
 class Solution {
 public:
     int islandPerimeter(vector<vector<int>>& grid) {
