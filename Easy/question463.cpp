@@ -21,6 +21,7 @@ public:
     }
 };
 
+// Pseudo dfs iteratively using stack
 class Solution {
 public:
     int islandPerimeter(vector<vector<int>>& grid) {
