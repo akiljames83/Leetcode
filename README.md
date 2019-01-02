@@ -97,3 +97,6 @@ int main() {
 - Go over question821 elegant solution
 - Iterative solution for question872
 - Go over algorithm library
+
+## Good Review Questions:
+- Trimming Binary Tree : Question 669 
