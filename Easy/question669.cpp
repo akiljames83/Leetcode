@@ -1,3 +1,4 @@
+// Iterative Approach
 class Solution {
 public:
     void trimLeft(TreeNode* root, int L){
@@ -86,3 +87,5 @@ public:
         return root;
     }
 };
+
+// TODO: Recursive Approach!
