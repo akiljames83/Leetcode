@@ -19,3 +19,24 @@ public:
         return dist;
     }
 };
+
+// Cleaner solution
+class Solution {
+public:
+    int binaryGap(int N) {
+        int prev{-1}, dist{0};
+        int cnt{0};
+        while(N){
+            if (N & 0x01) 
+                if (prev < 0) prev = cnt;
+                else {
+                    int t = cnt - prev;
+                    dist = t > dist ? t : dist;
+                    prev = cnt;
+                }
+            cnt++;
+            N >>= 1;
+        }
+        return dist;
+    }
+};
