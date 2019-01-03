@@ -50,6 +50,7 @@ int main() {
 	- To reverse a string: `std::reverse(str.begin(), str.end());`
 	- `str.find_first_of(C,P)` -> Finds first occurence of any character in C starting at position P
 	- `str.find_last_of(C,P)` -> Similar function to previous but finds last occurence
+	- `std::to_string(int)` -> Function that converts an integer into a string.
 - sstream library is also useful, some methods:
 	- Use `<<` to append values to string
 	- Convert variable to string use `.str()` method
