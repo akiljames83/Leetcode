@@ -22,3 +22,15 @@ public:
         return root;
     }
 };
+
+// Recursive Solution
+class Solution {
+public:
+    TreeNode* invertTree(TreeNode* root) {
+        if (!root) return root;
+        auto tmp = root->right;
+        root->right = invertTree(root->left);
+        root->left = invertTree(tmp);
+        return root;
+    }
+};
