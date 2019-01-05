@@ -28,3 +28,27 @@ public:
 };
 
 // Do it without a set
+#define isAlph(c) (c >= 'a' and c <= 'z') || (c >= 'A' and c <= 'Z')
+#define lower(c) (c >= 'a' and c <= 'z')
+class Solution {
+public:
+    void perms(string S, int pos, vector<string>& vec){
+        if (S.size() == pos) return;
+        if (isAlph(S[pos])) {
+            string tmp = S;
+            if (lower(S[pos])){
+                tmp[pos] = toupper(S[pos]);
+            } else{
+                tmp[pos] = tolower(S[pos]);
+            }
+            vec.push_back(tmp);
+            perms(tmp,pos+1,vec);
+        }
+        perms(S,pos+1,vec);
+    }
+    vector<string> letterCasePermutation(string S) {
+        vector<string> res{1,S};
+        perms(S, 0, res);
+        return res;
+    }
+};
