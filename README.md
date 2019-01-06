@@ -99,6 +99,7 @@ int main() {
 - Iterative solution for question872
 - Go over algorithm library
 - Go over recursive solutions for Question 669; review YOUR iterative solution!
+- Finish Quad tree : Q 427
 
 ## Good Review Questions:
 - Trimming Binary Tree : Question 669 
