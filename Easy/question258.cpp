@@ -10,3 +10,11 @@ public:
         return addDigits(ret); 
     }
 };
+
+// Constant time solution:
+class Solution {
+public:
+    int addDigits(int num) {
+        return (num % 9 or !num) ? num%9 : 9;
+    }
+};
