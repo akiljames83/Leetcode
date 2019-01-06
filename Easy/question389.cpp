@@ -13,6 +13,21 @@ public:
     }
 };
 
+// Similarily fast way using xor;
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        int res{0};
+        for (auto c : s) {
+            res ^= static_cast<int>(c);
+        }
+        for (auto c : t) {
+            res ^= static_cast<int>(c);
+        }
+        return static_cast<int>(res);
+    }
+};
+
 // Using a vector instead of map
 class Solution {
 public:
