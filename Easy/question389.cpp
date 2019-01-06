@@ -1,5 +1,3 @@
-
-
 // Using a vector instead of map
 class Solution {
 public:
@@ -11,6 +9,30 @@ public:
         for (auto c: t){
             if (!map[c - 'a']) return c;
             map[c - 'a']--;
+        }
+    }
+};
+
+// Using a map:
+class Solution {
+public:
+    char findTheDifference(string s, string t) {
+        unordered_map<char,int> smap;
+        for (auto c: s){
+            if (smap.find(c) != smap.end()){
+                smap[c]++;
+            } else {
+                smap[c] = 1;
+            }
+        }
+        for (auto c: t){
+            if (smap.find(c) != smap.end()){
+                smap[c]--;
+                if (!smap[c]) smap.erase(c);
+            }
+            else{
+                return c;
+            }
         }
     }
 };
