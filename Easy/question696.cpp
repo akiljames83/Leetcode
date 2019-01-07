@@ -1,23 +1,18 @@
 class Solution {
 public:
     int countBinarySubstrings(string s) {
-        int count{};
-        int preCount = 0;
-        int curCount = 0;
-        int beginp = 0;
-        int endp = 0;
+        int count{}, preCount{}, curCount{}, beginp{}, endp{};
         bool flip = false;
         char prev = s[0];
+        
         while(endp != s.length()){
+            
             if (s[++endp] == prev){
-                curCount++;
-                if (flip) {
-                    if ((preCount + 1 >= curCount)){
-                        count++;
-                    }
-                }
+                if ((preCount >= curCount++) and flip)
+                    count++;
+        
             } else {
-                if (flip) { // now inc
+                if (flip) { 
                     if ((preCount >= curCount)){
                         count++;
                     }    
