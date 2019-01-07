@@ -1,4 +1,4 @@
-// Recursive Solution
+// Iterative Solution
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
@@ -18,3 +18,7 @@ public:
         
     }
 };
+
+// Recursive Solution:
+
+// Also Iterative with O(1) Space and O(N) Time!
