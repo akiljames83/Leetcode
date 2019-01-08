@@ -14,3 +14,5 @@ public:
         
     }
 };
+
+// Use Moore Voting Algorithm !! Well implement
