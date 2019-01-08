@@ -104,4 +104,5 @@ int main() {
 ## Good Review Questions:
 - Trimming Binary Tree : Question 669 
 - Invert Binary Tree : Question 226
-- Reverse Linked List: Question 206 **
+- Reverse Linked List : Question 206 **
+- Moore Voting Algorithm : Question 169 (Basic Logic)
