@@ -37,3 +37,19 @@ public:
         return true;
     }
 };
+
+// Slighty better version: Using an array instead of a vector
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.size() != t.size()) return false;
+        int map [26]{};
+        for (auto c: s)
+           map[c-'a']++;
+        for (auto c: t) {
+            if (!map[c-'a']--)
+                return false;
+        }
+        return true;
+    }
+};
