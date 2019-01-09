@@ -12,3 +12,15 @@ public:
         return res;
     }
 }; 
+
+// No helper function implementation
+class Solution {
+public:
+    string tree2str(TreeNode* t) {
+        if (!t) 
+            return "";
+        return to_string(t->val) + 
+            ((t->left) ? ("(" + tree2str(t->left) + ")") : ((t->right) ? "()" : "")) + 
+            ((t->right) ? ("(" + tree2str(t->right) + ")") : "");
+    }
+};
