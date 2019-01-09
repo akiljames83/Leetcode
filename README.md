@@ -95,7 +95,7 @@ int main() {
 ## STD Functions; Important for Vectors  
 - `std::unique(v.begin()), v.end()` this function removes all repeated values in an array (that is sorted)
 	- `{1,1,1,2,2,3,3,3,4,5}` becomes -> `{1,2,3,4,5,x,x,x,x,x}`
-	- Great use of this function is <strong> Question 217 </strong> in Basic Logic.
+	- Great use of this function is <strong> Question 217 </strong> in Basic Logic. 
 - `std::sort(v.begin(),v.end())` this function does a timsort* in O(N * log(N)) time
 - `std::binary_search(v.begin(), v.end(), K)` this function returns a bool for whether or not the value K is in the vector
 
