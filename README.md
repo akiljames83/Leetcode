@@ -19,7 +19,7 @@ auto fast_io =[]()
 - However, it appears that unordered map is much more efficient for a pure look up table.
 - To use it: `unordered_map <int> myMap;` 
 
-## Initializer list Map
+## Initializer List for a Map
 ```c++
 std::map<std::string, int> mapOfMarks = 
 {
