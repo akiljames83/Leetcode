@@ -21,3 +21,19 @@ public:
         return true;
     }
 };
+
+// Un-portable array version
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        if (s.size() != t.size()) return false;
+        vector<int>map(26,0);
+        for (auto c: s)
+           map[c-'a']++;
+        for (auto c: t) {
+            if (!map[c-'a']--)
+                return false;
+        }
+        return true;
+    }
+};
