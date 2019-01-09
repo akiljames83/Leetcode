@@ -1,26 +1,14 @@
-// Wrong Implementation
+// Correct Implementation:
 class Solution {
 public:
-    string pot(TreeNode *node, string str){
-        if (!node) 
-            return str;
-        string tstr{""};
-        if (node->right)
-            str = pot(node->right, str);
-        
-        //tstr = "(" + to_string(node->val) + ")";
-        tstr = to_string(node->val);
-        
-        if (node->left)
-            str = pot(node->left, str);
-        else
-            if (node->right)
-                str = "()" + str;
-        
-        return tstr + "(" + str + ")";
+    string pot(TreeNode *node){
+        return to_string(node->val) + 
+        	((node->left) ? ("(" + pot(node->left) + ")") : ((node->right) ? "()" : "")) + 
+        	((node->right) ? ("(" + pot(node->right) + ")") : "");  
     }
     string tree2str(TreeNode* t) {
-        string res = pot(t, "");
+        if (!t) return "";
+        string res = pot(t);
         return res;
     }
-};
+}; 
