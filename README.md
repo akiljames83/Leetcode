@@ -92,6 +92,14 @@ int main() {
 - To flip a bit: `bit ^= 0x01`; XOR operation with a single bit will perform the operation on least significant bit.
 - To retrieve the value from last bit: `bit &= 0x01` (in-place) or `bit = num & 0x01` (storing in new number). 
 
+## STD Functions; Important for Vectors  
+- `std::unique(v.begin()), v.end()` this function removes all repeated values in an array (that is sorted)
+	- `{1,1,1,2,2,3,3,3,4,5}` becomes -> `{1,2,3,4,5,x,x,x,x}`
+	- Great use of this function is <strong> Question 217 <strong> in Basic Logic.
+- `std::sort(v.begin(),v.end())` this function does a timsort* in O(N * log(N)) time
+- `std::binary_search(v.begin(), v.end(), K)` this function returns a bool for whether or not the value K is in the vector
+
+
 ## TODO
 - Figure out iterative approach for question 590 and lookover iterative approach for 589
 - Inplace solution for question557.cpp
