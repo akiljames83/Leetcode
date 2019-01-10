@@ -32,3 +32,28 @@ public:
         return root;
     }
 };
+
+// Better Solution: Iterating through the tree one time
+class Solution {
+public:
+    void pot(TreeNode* node, int & total){
+        if (!node)
+            return;
+        if (node->right)
+            pot(node->right, total);
+        
+        int tmp = node->val;
+        node->val += total;
+        total += tmp;
+        
+        
+        if (node->left)
+            pot(node->left, total);
+            
+    }
+    TreeNode* convertBST(TreeNode* root) {
+        int total{0};
+        pot(root, total);
+        return root;
+    }
+};
