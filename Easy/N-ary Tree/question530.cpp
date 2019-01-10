@@ -7,9 +7,8 @@ public:
         if (root->left)
             pot(root->left, min, prev);
         
-        if (prev > -1)
-            if (root->val - prev < min)
-                min = root->val - prev;
+        if (prev > -1 and root->val - prev < min)
+            min = root->val - prev;
         
         prev = root->val;
         
@@ -17,8 +16,7 @@ public:
             pot(root->right, min, prev);
     }
     int getMinimumDifference(TreeNode* root) {
-        int min{INT_MAX};
-        int prev{-1};
+        int min{INT_MAX}, prev{-1};
         pot(root, min, prev);
         return min;
     }
