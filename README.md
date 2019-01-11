@@ -118,4 +118,4 @@ int main() {
 - Construct String from Binary Tree : Question 606 (N-ary Tree)
 
 ## Other Review:
-- In Order traversal: https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
+- In Order Iterative traversal: https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
