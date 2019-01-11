@@ -22,3 +22,20 @@ public:
         return true;
     }
 };
+
+// Using a vector instead of a hashtable
+class Solution {
+public:
+    bool canConstruct(string ransomNote, string magazine) {
+        // Easy solution with map
+        vector<int> map(256,0);
+        for (char c : magazine)
+            map[static_cast<int>(c)]++;
+        
+        for (char c: ransomNote)
+            if (!map[static_cast<int>(c)]--)
+                return false;
+
+        return true;
+    }
+};
