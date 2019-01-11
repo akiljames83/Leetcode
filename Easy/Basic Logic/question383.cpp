@@ -23,7 +23,7 @@ public:
     }
 };
 
-// Using a vector instead of a hashtable
+// Using a vector instead of a hashtable: O(N) beats 99.51%;
 class Solution {
 public:
     bool canConstruct(string ransomNote, string magazine) {
