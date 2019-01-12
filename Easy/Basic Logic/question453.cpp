@@ -46,3 +46,18 @@ public:
         return total;
     }
 };
+
+// One Pass Solution
+class Solution {
+public:
+    int minMoves(vector<int>& nums) {
+        int min = INT_MAX;
+        int total{};
+        for (int i : nums) {
+            total += i;
+            if (i < min)
+                min = i;
+        }
+        return total - min*nums.size();
+    }
+};
