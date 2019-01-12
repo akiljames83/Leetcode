@@ -31,3 +31,18 @@ public:
         return count;
     }
 };
+
+// Two Pass Correct Solution:
+class Solution {
+public:
+    int minMoves(vector<int>& nums) {
+        int min = INT_MAX;
+        int total{};
+        for (int i : nums)
+            if (i < min)
+                min = i;
+        for (int n : nums)
+            total += n - min;
+        return total;
+    }
+};
