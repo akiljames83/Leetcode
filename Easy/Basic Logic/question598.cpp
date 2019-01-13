@@ -14,3 +14,19 @@ public:
         return min_h * min_w;
     }
 };
+
+// Beats 100%
+class Solution {
+public:
+    int maxCount(int m, int n, vector<vector<int>>& ops) {
+        int min_w{m};
+        int min_h{n};
+        for (auto v : ops){
+            if (v[0] < min_w)
+                min_w = v[0];
+            if (v[1] < min_h)
+                min_h = v[1];
+        }
+        return min_h * min_w;
+    }
+};
