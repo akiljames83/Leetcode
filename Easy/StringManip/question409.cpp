@@ -10,7 +10,7 @@ public:
                 map[c-'A'+26]++;
         }
         bool single{false};
-        int count{}, max{};
+        int count{0}, max{0};
         for (auto i : map){
             if (!(i%2))
                 count += i;
