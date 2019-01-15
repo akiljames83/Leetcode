@@ -1,4 +1,3 @@
-#define isUp(c) ((c >= 'A') and (c <= 'Z'))
 #define isLow(c) ((c >= 'a') and (c <= 'z'))
 class Solution {
 public:
