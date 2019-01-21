@@ -112,6 +112,7 @@ int main() {
 - Go over recursive solutions for Question 669; review YOUR iterative solution!
 - Finish Quad tree : Q 427
 - Implement Moore Voting Algorithm for Question 169 (Basic Logic)
+- Better solution for Question 338 (Medium - BitManip)
 
 ## Good Review Questions:
 - Trimming Binary Tree : Question 669 
