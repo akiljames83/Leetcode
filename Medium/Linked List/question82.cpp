@@ -5,11 +5,9 @@ public:
             return head;
         
         auto front = head;
-        
-        auto cur = head;
+        auto cur = head->next;
         auto prev = head;
         
-        cur = cur->next;
         while(cur){
             if (cur->val == prev->val) {
                 prev->next = cur->next;
@@ -22,11 +20,10 @@ public:
                     prev->next = cur->next;
                     cur = cur->next;
                 } else {
-                    //delete prev;
                     if (front->val == prev->val)
                         return NULL;
                     auto tmp = front;
-                    while (true){
+                    for (;;) {
                         if(tmp->next->val == prev->val){
                             tmp->next = NULL;
                             return front;
