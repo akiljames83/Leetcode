@@ -121,6 +121,7 @@ int main() {
 - Construct String from Binary Tree : Question 606 (N-ary Tree)
 - Minimum Moves to Equal Array : Question 453 (Basic Logic)
 - Remove Duplicated from Sorted Array II : Question 80 (Medium - Basic Logic) - do it cleaner
+- Maximum Sub Array : Question53 (Easy - DP)
 
 ## Other Review:
 - In Order Iterative traversal: https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
