@@ -35,3 +35,29 @@ public:
         return res;
     }
 };
+
+// Better version; constant space
+
+class Solution {
+public:
+    TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+        if (!p || !q)
+            return nullptr;
+        if (p->val == q->val)
+            return p;
+        auto prev = root;
+        while(true){
+            if ((root->val >= p->val and root->val <= q->val) || (root->val >= q->val and root->val <= p->val)) {
+                return root;
+            } else if (root->val >= p->val and root->val >= q->val) {
+                prev = root;
+                root = root->left;
+            } else if (root->val <= p->val and root->val <= q->val) {
+                prev = root;
+                root = root->right;
+            } else
+                return prev;
+        }
+        return nullptr;
+    }
+};
