@@ -123,6 +123,7 @@ int main() {
 - Minimum Moves to Equal Array : Question 453 (Basic Logic)
 - Remove Duplicated from Sorted Array II : Question 80 (Medium - Basic Logic) - do it cleaner
 - Maximum Sub Array : Question53 (Easy - DP)
+- Palandrome Linked List : Question234 (Easy - LinkedList)
 
 ## Other Review:
 - In Order Iterative traversal: https://www.geeksforgeeks.org/inorder-tree-traversal-without-recursion/
