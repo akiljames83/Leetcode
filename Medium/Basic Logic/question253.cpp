@@ -11,6 +11,9 @@ Example 2:
 Input: [[7,10],[2,4]]
 Output: 1
 
+Input: [[12,15],[1,13],[11,13]]
+Output: 3
+
 */
 
 class Solution {
