@@ -1,3 +1,27 @@
+// Better with priority queue
+class Solution {
+public:
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        if (!lists.size())
+            return nullptr;
+        priority_queue<int> q;
+        for (int i = 0; i < lists.size(); i++) {
+            auto tmp = lists[i];
+            while(tmp) {
+                q.push(tmp->val);
+                tmp = tmp->next;
+            }
+        }
+        ListNode* front = NULL;
+        while (!q.empty()) {
+            auto tmp = new ListNode(q.top());
+            tmp->next = front;
+            front = tmp;
+            q.pop();
+        }
+        return front;
+    }
+};
 
 // Bad Solution
 class Solution {
