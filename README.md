@@ -40,6 +40,7 @@ bool func(const pair<int,int> &a, const pair<int,int> &b)
 }
 
 int main() {
+	// vector to be sorted
 	vector<pair<int,int>> vec;
 
 	// Sort the vector after population
