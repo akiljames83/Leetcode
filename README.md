@@ -21,6 +21,7 @@ auto fast_io =[](){std::ios::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nu
 - Unordered Map takes up more memory generally as it stores a much larger array.
 - However, it appears that unordered map is much more efficient for a pure look up table.
 - To use it: `unordered_map <int> myMap;` 
+- Additionally, the woest case runtime is a bit different, lgN verses N (map vs umap)
 
 ## Initializer List for a Map
 ```c++
@@ -29,6 +30,21 @@ std::map<std::string, int> mapOfMarks =
 	{"Riti",2},
 	{"Jack",4}
 };
+```
+
+## Sorting using helper function
+```c++
+bool func(const pair<int,int> &a, const pair<int,int> &b) 
+{ 
+    return (a.second < b.second); 
+}
+
+int main() {
+	vector<pair<int,int>> vec;
+
+	// Sort the vector after population
+	sort(vec.begin(), vec.end(), func); 
+}
 ```
 
 ## Input and Output in C++  
